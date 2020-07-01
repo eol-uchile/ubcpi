@@ -25,6 +25,8 @@ jobs:
 
     - name: Install dependencies
       run: |
+        apt update
+        apt install -yq gettext
         make deps
         pip install -e .
         python -m pip install --upgrade pip
