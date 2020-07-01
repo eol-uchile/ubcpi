@@ -620,10 +620,10 @@ class PeerInstructionXBlock(XBlock, MissingDataFetcherMixin, PublishEventMixin):
             stats['revised'][answer] = num_resp + 1
 
             # Fetch the grade
-            grade = self.get_grade()
+            grade = self.get_grade() * float(self.weight)
 
             # Send the grade
-            self.runtime.publish(self, 'grade', {'value': grade, 'max_value': 1})
+            self.runtime.publish(self, 'grade', {'value': grade, 'max_value': self.weight})
 
             self.publish_event_from_dict(
                     self.event_namespace + '.revised_submitted',
