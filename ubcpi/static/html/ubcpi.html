@@ -45,10 +45,10 @@
                 <fieldset>
 
                     <legend>
-                        <span data-ng-if="rc.status() == rc.ALL_STATUS.NEW" style="color:#414141" translate>Step 1) Give Initial Answer <span class="inline-hint">You can change this answer later, if you change your mind.</span></span>
-                        <span data-ng-if="rc.status() == rc.ALL_STATUS.ANSWERED" style="color:#414141" translate>Step 2) Read Other Student Answers
-                            <p class="ubcpi-other-answers-instructions" translate>These are randomly chosen samples of other student answers for this question. Read them and compare with your answer below. Then you may revise your answer, if you wish.</p>
-                        </span>
+                        <span data-ng-if="rc.status() == rc.ALL_STATUS.NEW" style="color:#414141" translate>Step 1) Give Initial Answer</span> <span data-ng-if="rc.status() == rc.ALL_STATUS.NEW" class="inline-hint" translate>You can change this answer later, if you change your mind.</span>
+                        <span data-ng-if="rc.status() == rc.ALL_STATUS.ANSWERED" style="color:#414141" translate>Step 2) Read Other Student Answers</span>
+                            <p data-ng-if="rc.status() == rc.ALL_STATUS.ANSWERED" class="ubcpi-other-answers-instructions" translate>These are randomly chosen samples of other student answers for this question. Read them and compare with your answer below. Then you may revise your answer, if you wish.</p>
+                        
                     </legend>
 
                     <div id="hiding-options-div" class="ubcpi-possible-options">
@@ -142,7 +142,7 @@
                                 </label>
 
                                 <div aria-hidden="true">
-                                    <pi-per-answer-chart options="options" stats="rc.stats" correct="rc.correct_answer" answers="{original: rc.answer_original, revised: rc.answer_revised}" per-answer-stats="$index" data-role="user_role"></pi-per-answer-chart>
+                                    <pi-per-answer-chart options="options" stats="rc.stats" correct="rc.correct_answer" answers="{original: rc.answer_original, revised: rc.answer_revised}" per-answer-stats="$index" data-role="user_role" translate></pi-per-answer-chart>
                                 </div>
                             </div>
                         </div>
@@ -210,7 +210,7 @@
                             <span data-ng-if="rc.correct_answer === $index && rc.correct_rationale.text" class="ubcpi-correct-answer-rationale">{{rc.correct_rationale.text}}</span>
 
                             <div aria-hidden="true">
-                                <pi-per-answer-chart options="options" stats="rc.stats" correct="rc.correct_answer" answers="{original: rc.answer_original, revised: rc.answer_revised}" per-answer-stats="$index" data-role="user_role"></pi-per-answer-chart>
+                                <pi-per-answer-chart options="options" stats="rc.stats" correct="rc.correct_answer" answers="{original: rc.answer_original, revised: rc.answer_revised}" per-answer-stats="$index" data-role="user_role" translate></pi-per-answer-chart>
                             </div>
 
                             <div data-ng-if="$index === rc.answer_revised" class="ubcpi-final">

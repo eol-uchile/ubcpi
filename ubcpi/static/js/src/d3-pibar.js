@@ -163,7 +163,7 @@ d3.custom.barChart = function(scope, gettext) {
  *     {percentage: 75, order: 1, label: 'after revision', class: 'ubcpibar'},
  * ]
  */
-d3.custom.perAnswerChart = function(scope, gettext, allAnswerCount) {
+d3.custom.perAnswerChart = function(scope, gettextCatalog, allAnswerCount) {
     // Private Variables
     var chartWidth  = 750;
     var chartHeight = 56;
@@ -186,7 +186,7 @@ d3.custom.perAnswerChart = function(scope, gettext, allAnswerCount) {
                 d3.select(this)
                     .append("span")
                     .attr("id", 'not-enough-data')
-                    .text(gettext("Not enough data to generate the chart. Please check back later."));
+                    .text(gettextCatalog.getString("Not enough data to generate the chart. Please check back later."));
                 return;
             } else {
                 var notEnoughDataSpan = d3.select(this).select('#not-enough-data');

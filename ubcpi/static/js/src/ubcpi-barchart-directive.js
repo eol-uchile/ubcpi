@@ -40,7 +40,7 @@ angular.module('UBCPI').
 
 
 angular.module('UBCPI').
-    directive('piPerAnswerChart', ['gettext', function(gettext){
+    directive('piPerAnswerChart', ['gettextCatalog', function(gettextCatalog){
         return {
             restrict: 'E',
             scope: {
@@ -74,17 +74,17 @@ angular.module('UBCPI').
                             percentage: (total > 0 && typeof stats[k][scope.perAnswerStats] !== 'undefined'?
                                 (stats[k][scope.perAnswerStats] / total) * 100 : 0),
                             order: k === 'original'? 0 : 1,
-                            text:  (scope.answers[k] == scope.perAnswerStats? gettext('(including you) ') : ''),
+                            text:  (scope.answers[k] == scope.perAnswerStats? gettextCatalog.getString('(including you)') : ''),
                             class: 'ubcpibar' +  (scope.correct == scope.perAnswerStats ? ' correct-answer' : '') +
                                 (k === 'original'? ' original' : ''),
                             label_class: 'ubcpibar label',
-                            type: k === 'original'? gettext('Chose initially') : gettext('Chose after revision')
+                            type: k === 'original'? gettextCatalog.getString('Chose initially') : gettextCatalog.getString('Chose after revision')
                         });
                     }
 
                     d3.select(element[0]).select("svg").remove();   // remove old chart
                     // generate the chart
-                    var chartLayout = d3.custom.perAnswerChart(scope, gettext, allAnswerCount);
+                    var chartLayout = d3.custom.perAnswerChart(scope, gettextCatalog, allAnswerCount);
                     d3.select(element[0])
                         .datum(data)
                         .call(chartLayout);

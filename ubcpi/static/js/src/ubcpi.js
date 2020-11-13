@@ -110,7 +110,7 @@ angular.module('UBCPI', ['ngSanitize', 'ngCookies', 'gettext'])
             },
             link: function(scope, ele, attr, ctrl) {
                 var option = attr.ubcpiOption;
-                var desc = '<span>' + gettext('Show other samples') + '</span>';
+                var desc = '<span translate>' + gettext('Show other samples') + '</span>';
                 var desc_loading = '<span>' + gettext('Refreshing...') + '</span>';
 
                 function call_refresh() {

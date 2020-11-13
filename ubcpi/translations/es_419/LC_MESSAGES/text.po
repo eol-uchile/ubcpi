@@ -689,3 +689,71 @@ msgstr "Aparece arriba"
 #: ubcpi/ubcpi.py:313
 msgid "Appears below"
 msgstr "Aparece abajo"
+
+#: ubcpi/static/html/ubcpi.html:48
+msgid "Step 1) Give Initial Answer"
+msgstr "Paso 1) Respuesta Inicial"
+
+#: ubcpi/static/html/ubcpi.html:48
+msgid "You can change this answer later, if you change your mind."
+msgstr "Podrás modificar tu respuesta más adelante."
+
+#: ubcpi/static/html/ubcpi.html:49
+msgid "Step 2) Read Other Student Answers"
+msgstr "Paso 2) Revisar respuestas de otros participantes"
+
+#: ubcpi/static/html/ubcpi.html:50
+msgid "These are randomly chosen samples of other student answers for this question. Read them and compare with your answer below. Then you may revise your answer, if you wish."
+msgstr "Estas son muestras elegidas al azar de las respuestas de otros estudiantes para esta pregunta. Léalos y compárelos con su respuesta a continuación. Luego puede revisar su respuesta, si lo desea."
+
+#: ubcpi/static/html/ubcpi.html:80
+msgid "Explain to other students why you chose this answer (required):"
+msgstr "Explica tu respuesta a otros estudiantes (requerido):"
+
+#: ubcpi/static/js/src/ubcpi.js:113
+msgid "Show other samples"
+msgstr "Mostrar otras muestras"
+
+#: ubcpi/static/html/ubcpi.html:112
+msgid "You:"
+msgstr "Tu:"
+
+#: ubcpi/static/html/ubcpi.html:115
+msgid "What would you like to do?"
+msgstr "¿Qué te gustaría hacer?"
+
+#: ubcpi/static/html/ubcpi.html:117
+msgid "Revise Answer"
+msgstr "Revisar Respuesta"
+
+#: ubcpi/static/html/ubcpi.html:119
+msgid "Submit Answer"
+msgstr "Enviar Respuesta Final"
+
+#: ubcpi/static/html/ubcpi.html:192
+msgid "Step 3) View Course-Wide Results"
+msgstr "Paso 3) Ver resultados de todo el curso"
+
+#: ubcpi/static/html/ubcpi.html:193
+msgid "This is a look at how your classmates answered the question initially and after revision."
+msgstr "Este es un vistazo a cómo sus compañeros de clase respondieron la pregunta inicialmente y después de la revisión."
+
+#: ubcpi/static/html/ubcpi.html:138 ubcpi/static/html/ubcpi.html:204
+msgid "Correct Answer:"
+msgstr "Respuesta correcta:"
+
+#: ubcpi/static/js/src/ubcpi-barchart-directive.js:81
+msgid "Chose initially"
+msgstr "Respuesta inicial"
+
+#: ubcpi/static/js/src/ubcpi-barchart-directive.js:81
+msgid "Chose after revision"
+msgstr "Respuesta final"
+
+#: ubcpi/static/js/src/ubcpi-barchart-directive.js:77
+msgid "(including you)"
+msgstr "(incluyéndote)"
+
+#: ubcpi/static/html/ubcpi.html:213 ubcpi/static/html/ubcpi.html:218
+msgid "Your final explanation:"
+msgstr "Tu explicación final:"
