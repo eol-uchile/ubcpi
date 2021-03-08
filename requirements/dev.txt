@@ -4,7 +4,7 @@
 django-debug-panel==0.8.3
 django-debug-toolbar==1.11
 django-pdb==0.6.2
-sqlparse==0.1.10
+sqlparse>=0.2.0
 
 # runserver_plus
 Werkzeug==0.10.4
