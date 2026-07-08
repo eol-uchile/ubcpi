@@ -6,15 +6,16 @@ from ddt import ddt, file_data
 from django.core.exceptions import PermissionDenied
 from django.test import TestCase
 from mock import patch, Mock
-from workbench.test_utils import scenario, XBlockHandlerTestCaseMixin
+from workbench.test_utils import scenario
 
 from ubcpi.persistence import Answers, VOTE_KEY, RATIONALE_KEY
 from ubcpi.ubcpi import truncate_rationale, MAX_RATIONALE_SIZE_IN_EVENT
 import six
+from common.djangoapps.util.testing import UrlResetMixin
 
 
 @ddt
-class LmsTest(XBlockHandlerTestCaseMixin, TestCase):
+class LmsTest(UrlResetMixin, TestCase):
     @scenario(os.path.join(os.path.dirname(__file__), 'data/basic_scenario.xml'), user_id='Bob')
     def test_render_student_view(self, xblock):
         # mock static asset path because it is not set in workbench

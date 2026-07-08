@@ -1,0 +1,10 @@
+{
+  "pull_request": {
+    "head": {
+      "ref": "eol-release/koa"
+    },
+    "base": {
+      "ref": "eol-release/koa"
+    }
+  }
+}
